@@ -1,6 +1,6 @@
-
- module.exports ={
-   function GameManager(size, InputManager, Actuator, StorageManager) {
+import Grid from './grid';
+import Tile from './tile';
+function GameManager(size, InputManager, Actuator, StorageManager) {
   this.size           = size; // Size of the grid
   this.inputManager   = new InputManager;
   this.storageManager = new StorageManager;
@@ -15,9 +15,6 @@
   this.setup();
 }
 
-
- } 
-  
   // Restart the game
   GameManager.prototype.restart = function () {
     this.storageManager.clearGameState();
@@ -275,3 +272,5 @@
   GameManager.prototype.positionsEqual = function (first, second) {
     return first.x === second.x && first.y === second.y;
   };
+
+  export default GameManager;

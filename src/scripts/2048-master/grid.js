@@ -1,4 +1,5 @@
-export function Grid(size, previousState) {
+import Tile from './tile';
+function Grid(size, previousState) {
   this.size = size;
   this.cells = previousState ? this.fromState(previousState) : this.empty();
 }
@@ -115,3 +116,5 @@ Grid.prototype.serialize = function () {
     cells: cellState
   };
 };
+
+export default Grid;

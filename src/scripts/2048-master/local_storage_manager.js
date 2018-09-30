@@ -18,7 +18,7 @@ export var storage = window.fakeStorage = {
   }
 };
 
-export function LocalStorageManager() {
+function LocalStorageManager() {
   this.bestScoreKey     = "bestScore";
   this.gameStateKey     = "gameState";
 
@@ -61,3 +61,5 @@ LocalStorageManager.prototype.setGameState = function (gameState) {
 LocalStorageManager.prototype.clearGameState = function () {
   this.storage.removeItem(this.gameStateKey);
 };
+
+export default LocalStorageManager;

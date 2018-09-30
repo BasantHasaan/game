@@ -1,4 +1,4 @@
-export function Tile(position, value) {
+function Tile(position, value) {
   this.x                = position.x;
   this.y                = position.y;
   this.value            = value || 2;
@@ -25,3 +25,5 @@ Tile.prototype.serialize = function () {
     value: this.value
   };
 };
+
+export default Tile;

@@ -1,4 +1,4 @@
-export function KeyboardInputManager() {
+function KeyboardInputManager() {
   this.events = {};
 
   if (window.navigator.msPointerEnabled) {
@@ -142,3 +142,5 @@ KeyboardInputManager.prototype.bindButtonPress = function (selector, fn) {
   button.addEventListener("click", fn.bind(this));
   button.addEventListener(this.eventTouchend, fn.bind(this));
 };
+
+export default KeyboardInputManager;
